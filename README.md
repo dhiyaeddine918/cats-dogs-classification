@@ -44,10 +44,6 @@ Each image was:
 
 A Logistic Regression model was then trained on these vectors.
 
-#### Why this approach?
-
-This method was used as a simple baseline to evaluate how well a standard classifier performs on raw image data.
-
 #### Result
 
 The baseline model achieved an accuracy of about `55%`.
@@ -71,15 +67,13 @@ After that:
 * PCA was applied to reduce dimensionality
 * a Linear SVM classifier was trained
 
-#### Why HOG?
-
 HOG (Histogram of Oriented Gradients) captures local edge and shape information, which is more useful than raw pixels for distinguishing cats and dogs.
 
-#### Why PCA?
+#### PCA:
 
 HOG features can be high-dimensional. PCA reduces feature size while preserving most of the useful information, which helps reduce training time.
 
-#### Why Linear SVM?
+#### Linear SVM:
 
 Linear SVM is effective for high-dimensional classification tasks and is computationally more practical than a standard SVM on large datasets.
 
@@ -135,73 +129,6 @@ This function:
   * `0` for Cat
   * `1` for Dog
 
----
-
-## Project Structure
-
-```text
-cats-dogs-classification/
-│
-├── README.md
-├── notebook.ipynb
-├── requirements.txt
-├── model/
-│   └── final_cats_dogs_model.pkl
-├── images/
-│   └── confusion_matrix.png
-└── data/
-    └── saved feature files if needed
-```
-
----
-
-## Technologies Used
-
-* Python
-* NumPy
-* OpenCV
-* scikit-learn
-* scikit-image
-* Matplotlib
-* Seaborn
-* Joblib
-
----
-
-## How to Run the Project
-
-1. Clone the repository:
-
-```bash
-git clone <your-repository-link>
-cd cats-dogs-classification
-```
-
-2. Install the required libraries:
-
-```bash
-pip install -r requirements.txt
-```
-
-3. Open the notebook and run the cells.
-
----
-
-## Requirements
-
-The main dependencies used in this project are:
-
-```text
-numpy
-opencv-python
-scikit-learn
-scikit-image
-matplotlib
-seaborn
-joblib
-```
-
----
 
 ## Results and Discussion
 
@@ -225,10 +152,3 @@ The main conclusions are:
 * PCA helps reduce computation time
 * Linear SVM is a good choice for high-dimensional features
 
-The final model satisfies the project constraints and provides a solid solution for cats vs dogs classification.
-
----
-
-## Author
-
-Your Name
