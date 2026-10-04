@@ -1,4 +1,4 @@
-# cats-dogs-classification using Machine learning
+# Classical ML Image Classifier
 # Overview:
 This project presents a binary image classification system that distinguishes between cats and dogs using classical machine learning techniques.
 
